@@ -3,4 +3,6 @@ build/
 coverage/
 .eslintcache
 npm-debug.log
+.project
+.settings/
 
