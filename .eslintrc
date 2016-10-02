@@ -8,6 +8,10 @@
     "node": true,
     "mocha": true
   },
+  "globals": {
+    "ArrayBuffer": true,
+    "Uint32Array": true
+  },
   "plugins": [
     "react"
   ],

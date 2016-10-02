@@ -12,7 +12,8 @@ const PATHS = {
     path.join(__dirname, 'app', 'main.css')
   ],
   build: path.join(__dirname, 'build'),
-  test: path.join(__dirname, 'tests')
+  test: path.join(__dirname, 'tests'),
+  workers: path.join(__dirname, 'workers')
 };
 
 process.env.BABEL_ENV = TARGET;
@@ -37,6 +38,7 @@ const common = merge(
     title: 'Web worker demo',
     appMountId: 'app'
   }),
+  parts.loadWorker(PATHS.workers),
   parts.loadJSX(PATHS.app),
   parts.lintJSX(PATHS.app)
 );

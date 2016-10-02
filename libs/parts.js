@@ -32,6 +32,20 @@ exports.loadJSX = function(include) {
   };
 }
 
+exports.loadWorker = function(include) {
+  return {
+    module: {
+      loaders: [
+        {
+          test: /\.(js)$/,
+          loaders: ['worker'],
+          include: include
+        }
+      ]
+    }
+  };
+}
+
 exports.loadIsparta = function(include) {
   return {
     module: {
