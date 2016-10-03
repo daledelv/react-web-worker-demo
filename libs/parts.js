@@ -38,7 +38,7 @@ exports.loadWorker = function(include) {
       loaders: [
         {
           test: /\.(js)$/,
-          loaders: ['worker'],
+          loaders: ['worker', 'babel'],
           include: include
         }
       ]
