@@ -1,6 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const validate = require('webpack-validator');
+var glob = require("glob");
 
 const parts = require('./libs/parts');
 
@@ -13,7 +14,8 @@ const PATHS = {
   ],
   build: path.join(__dirname, 'build'),
   test: path.join(__dirname, 'tests'),
-  workers: path.join(__dirname, 'workers')
+  //workers: path.join(__dirname, 'app', 'workers')
+  workers: glob.sync(path.join(__dirname, '**', 'workers'))
 };
 
 process.env.BABEL_ENV = TARGET;
